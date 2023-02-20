@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // конечная дата 31.05.2023
-    const deadline = new Date(2023, 05, 31);
+    // конечная дата 31.05.2023 (в коде 2023, 4, 31;  т.к отсчет идет с 0)
+    const deadline = new Date(2023, 4, 31);
     let timerId = null;
     let days, hours, minutes, seconds;
 
@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // вычисляем разницу дат 
       const diff = deadline - new Date();
-      // Получаем размер окна
-      const sizeWindow = document.documentElement.clientWidth;
-
+      
       if (diff <= 0) {
         clearInterval(timerId);
       }
@@ -65,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
         $seconds.textContent = seconds;
       }
 
+      // Получаем размер окна
+      const sizeWindow = document.documentElement.clientWidth;
       if (sizeWindow <= 768) {
         textDays.textContent = 'DD';
         textHours.textContent = 'HH';
