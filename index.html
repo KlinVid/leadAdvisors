@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA Test-frontend</title>
+
+    <script src="https://kit.fontawesome.com/fd6b4fb5e1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <div class="header__svg--left">
+                    <img src="images/header/Vector_left.svg" alt="svg__left" class="svg__left">
+                </div>
+                <div class="header__svg--right">
+                    <img src="images/header/Vector_right.svg" alt="svg__right" class="svg__right">
+                </div>
+
+                <div class="header__content">
+                    <div class="header__logo">
+                        <a href="/" class="header__link">
+                            <img src="images/header/logo60.svg" alt="">
+                        </a>    
+                    </div>
+                    <div class="header__text">
+                        <h1 class="header__title">Lead</h1>
+                        <h2 class="header__subtitle">Advisors</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="about">
+                <div class="about__inner">
+                    <h1 class="about__title">Under Construction</h1>
+                    <div class="about__text">We're making lots of improvements and will be back soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="timer">
+                <div class="timer__inner">
+
+                    <div class="timer__item">   
+                        <div class="timer__count timer--days">00</div>
+                        <div class="timer__text text--days"></div>
+                    </div>
+                    <div class="timer__colon">:</div>
+
+                    <div class="timer__item">
+                        <div class="timer__count timer--hours">00</div>
+                        <div class="timer__text text--hours"></div>
+                    </div>
+                    <div class="timer__colon">:</div>
+
+                    <div class="timer__item">
+                        <div class="timer__count timer--minutes">00</div>
+                        <div class="timer__text text--minutes"></div>
+                    </div>
+                    <div class="timer__colon">:</div>
+
+                    <div class="timer__item">
+                        <div class="timer__count timer--seconds">00</div>
+                        <div class="timer__text text--seconds"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="event">
+                <div class="event__inner">
+                    <div class="event__text">
+                        Check our event page when you wait:
+                    </div>
+                    <a href="https://egorovagency.by/#main" class="event__link" target="_blank">
+                        <div class="event__button">
+                            <span>Go to the event</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" >
+        <div class="container foot">
+            
+            <div class="footer__wrapper">
+                <div class="footer__inner">
+                    <form action="php" class="footer__subscribe" method="post">
+                        <input class="subscribe__input" id="email" type="email" placeholder="Enter your Email and get notified" required>
+                        <button class="subsribe__btn" type="submit">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <a href="#" class="footer__link">
+                        <span>Other Events</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="popup">
+        <div class="popup__container">
+            <div class="popup__inner">
+                <button class="popup__x-mark">
+                    <i class="fa-solid fa-xmark" id="fa-xmark"></i>
+                </button>
+                <h1 class="popup__title">Success!</h1>
+                <div class="popup__text">You have successfully subscribed to the email newsletter</div>
+                <button class="popup__close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section class="section">
+        <div class="container">
+            <div class="allEvents">
+                <div class="allEvents__inner">
+                    <h1 class="allEvents__title">All events</h1>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
