@@ -597,6 +597,7 @@ body {
 
 .info__link {
     text-decoration: none;
+    width: 256px;
 }
 
 .info__button {
@@ -625,7 +626,7 @@ body {
     }
 
     .allEvents__accordion {
-        display: block;
+        display: initial;
     }
     
     /* accordion*/
@@ -697,9 +698,15 @@ body {
         margin-bottom: 29px;
     }
 
+    .info__link {
+        width: 169px;
+        z-index: 10;
+    }
+
     .info__button {
         width: 169px;
         height: 44px;
+        cursor: pointer;
     }
 
     .info__number {
@@ -766,6 +773,12 @@ body {
 
     .subscribe__input {
         margin-bottom: 15px;
+    }
+
+    /*allEvents   */
+    .allEvents {
+        max-width: 320px;
+        height: 1172px;
     }
 
     /* accordion */

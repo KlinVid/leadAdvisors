@@ -1,25 +1,21 @@
+// Обратный отсчет
 document.addEventListener('DOMContentLoaded', function() {
-    // конечная дата 31.05.2023 (в коде 2023, 4, 31;  т.к отсчет идет с 0)
     const deadline = new Date(2023, 4, 31);
     let timerId = null;
     let days, hours, minutes, seconds;
 
-   // получаем элементы, содержащие компоненты даты
   const $days = document.querySelector('.timer--days');
   const $hours = document.querySelector('.timer--hours');
   const $minutes = document.querySelector('.timer--minutes');
   const $seconds = document.querySelector('.timer--seconds');
 
-  // получаем элементы, содержащие текст даты
   const textDays = document.querySelector('.text--days');
   const textHours = document.querySelector('.text--hours');
   const textMinutes = document.querySelector('.text--minutes');
   const textSeconds = document.querySelector('.text--seconds');
 
-    //Устанавливаем оставшееся времени в качестве содержимого элементов
     function countdownTimer() {
 
-      // вычисляем разницу дат 
       const diff = deadline - new Date();
       
       if (diff <= 0) {
@@ -38,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
         seconds = 0;
       }
 
-      //вывод даты на страницу
       if (days < 10) {
         $days.textContent = '0' + days;
       } else {
@@ -63,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
         $seconds.textContent = seconds;
       }
 
-      // Получаем размер окна
       const sizeWindow = document.documentElement.clientWidth;
       if (sizeWindow <= 768) {
         textDays.textContent = 'DD';
@@ -78,9 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // вызываем функцию countdownTimer
     countdownTimer();
-    // вызываем функцию countdownTimer каждую секунду
     timerId = setInterval(countdownTimer, 1000);
 });
 
@@ -99,18 +91,13 @@ function clickBtn() {
   popup.classList.remove('active');
 }
 
-// Добавляем обработчик к форме
 form.addEventListener('submit', function(e) {
-  // Предотвратить отправку формы браузером
   e.preventDefault();
 
   let formEmail = document.querySelector('.subscribe__input').value;
-  // Создание экземпляра объекта XMLHttpRequest
   let request = new XMLHttpRequest();
 
   request.addEventListener('load', function() {
-    // В этой части кода можно обрабатывать ответ от сервера
-    // console.log(request.response);
     if (request.status !== 200) {
       popup.classList.add('active');
     } else {
@@ -121,7 +108,6 @@ form.addEventListener('submit', function(e) {
   });
 
   request.open(this.method, this.action, true);
-  // request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
   request.send('&email=' + encodeURIComponent(formEmail));
 });
 
@@ -143,7 +129,6 @@ btnSmooth.addEventListener('click', function() {
 // прикрепление футера
 document.addEventListener('scroll', function () {
   const footerPosFixed = document.querySelector('.footer__wrapper');
-  const event = document.querySelector('.event');
   const footerInner = document.querySelector('.footer__inner');
 
   if (window.pageYOffset >= footerInner.offsetHeight) {
