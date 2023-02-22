@@ -763,7 +763,6 @@ body {
     .footer__inner {
         height: 180px;
         flex-direction: column;
-        margin-bottom: 110px;
     }
 
     .footer__smooth {
