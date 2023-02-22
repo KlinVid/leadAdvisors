@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//форма
+//форма ajax
 let form = document.querySelector('.footer__subscribe');
 let popup = document.querySelector('.popup');
 let closeBtn = document.querySelector('.popup__close');
@@ -126,7 +126,32 @@ form.addEventListener('submit', function(e) {
 });
 
 
+// плавный скролл
+const btnSmooth = document.querySelector('.footer__smooth');
+const allEvents = document.querySelector('.allEvents');
+const allEventsTitle = document.querySelector('.allEvents__title');
 
+btnSmooth.addEventListener('click', function() {
+  allEvents.scrollIntoView({behavior: "smooth"});
+  allEventsTitle.style = `
+  
+  animation: appear-title 1s ease-in-out;
+  
+  `;
+});
 
+// прикрепление футера
+document.addEventListener('scroll', function () {
+  const footerPosFixed = document.querySelector('.footer__wrapper');
+  const event = document.querySelector('.event');
+  const footerInner = document.querySelector('.footer__inner');
 
+  if (window.pageYOffset >= footerInner.offsetHeight) {
+    footerPosFixed.style.position = 'static';
+    footerPosFixed.style.marginBottom = '110px';
+  } else {
+    footerPosFixed.style.position = 'fixed';
+    footerPosFixed.style.marginBottom = '0px';
+  }
+});
 
