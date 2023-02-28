@@ -1,5 +1,5 @@
 // Обратный отсчет
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const deadline = new Date(2023, 4, 31);
     let timerId = null;
     let days, hours, minutes, seconds;
@@ -126,17 +126,5 @@ btnSmooth.addEventListener('click', function() {
   `;
 });
 
-// прикрепление футера
-document.addEventListener('scroll', function () {
-  const footerPosFixed = document.querySelector('.footer__wrapper');
-  const footerInner = document.querySelector('.footer__inner');
 
-  if (window.pageYOffset >= footerInner.offsetHeight) {
-    footerPosFixed.style.position = 'static';
-    footerPosFixed.style.marginBottom = '110px';
-  } else {
-    footerPosFixed.style.position = 'fixed';
-    footerPosFixed.style.marginBottom = '0px';
-  }
-});
 
